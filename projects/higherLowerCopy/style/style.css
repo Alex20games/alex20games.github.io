@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url("/projects/higherLowerCopy/img/bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+header {
+  width: auto;
+  height: 3rem;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+main {
+  margin-top: 5%;
+  display: grid;
+  grid-template-columns: repeat(8 auto);
+  grid-template-rows: 100px 200px 100px;
+  grid-template-areas:
+    "... ... bx1 bx1 bx1 bx1 ... ..."
+    "... bx2 bx2 ... ... bx3 bx3 ..."
+    "... bx4 bx4 bx5 ... bx6 bx6 ...";
+}
+
+.winner {
+  grid-area: bx1;
+  margin-bottom: 20px;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 21pt;
+}
+
+.numberOne {
+  grid-area: bx2;
+  text-align: center;
+  padding-top: 100px;
+  font-size: 22pt;
+}
+
+.numberTwo {
+  grid-area: bx3;
+  text-align: center;
+  padding-top: 100px;
+  font-size: 22pt;
+}
+
+.boxHL {
+  grid-area: bx4;
+  display: grid;
+}
+
+.start {
+  grid-area: bx5;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  margin-left: 3px;
+}
+
+.start:hover {
+  color: darkblue;
+  background-color: rgb(112, 128, 144 0.5);
+}
+
+.reset {
+  grid-area: bx5;
+}
+
+.computer {
+  grid-area: bx6;
+  text-align: center;
+  padding-top: 40px;
+}
+
+button {
+  background: transparent;
+  backdrop-filter: blur(20px);
+  color: whitesmoke;
+  transition: 300ms linear;
+}
+
+button:hover {
+  color: blueviolet;
+  background-color: rgb(112, 128, 144 0.5);
+}
+
+div {
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  backdrop-filter: blur(20px);
+  color: whitesmoke;
+}
+
+footer {
+  position: absolute;
+  bottom: 0px;
+  padding: 5px 20px;
+  color: whitesmoke;
+}

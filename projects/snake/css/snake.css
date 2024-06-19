@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url("/img/bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 25vw 50vw 25vw;
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-areas:
+    ".. hd .."
+    "as main .."
+    ".. .. ..";
+}
+
+header {
+  grid-area: hd;
+  margin-top: 5%;
+  color: bisque;
+}
+
+main {
+  grid-area: main;
+}
+
+aside {
+  grid-area: as;
+}
+
+button {
+  height: 30px;
+  width: 200px;
+  background-color: blueviolet;
+  border-radius: 5px;
+  transition: 400ms ease-in;
+}
+
+.normal:hover {
+  background-color: aquamarine;
+}
+
+.hard:hover {
+  background-color: red;
+}
